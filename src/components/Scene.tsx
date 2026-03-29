@@ -209,7 +209,7 @@ export default function Scene({ pools, loading, onSelect, filterWallet }: any) {
       )}
 
       {/* Advanced Cinematic Post-Processing */}
-      <EffectComposer disableNormalPass>
+      <EffectComposer>
         <Bloom 
           luminanceThreshold={0.5} // Only glow bright things
           luminanceSmoothing={0.9}
@@ -217,8 +217,6 @@ export default function Scene({ pools, loading, onSelect, filterWallet }: any) {
           levels={8} 
         />
         <Vignette eskil={false} offset={0.1} darkness={0.8} blendFunction={BlendFunction.MULTIPLY} />
-        {/* Adds a slight RGB split at the edges of the screen for modern look */}
-        <ChromaticAberration offset={new THREE.Vector2(0.002, 0.002)} blendFunction={BlendFunction.NORMAL} />
       </EffectComposer>
 
       <OrbitControls
