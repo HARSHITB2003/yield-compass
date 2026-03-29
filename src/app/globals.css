@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-neon: #00ffcc;
+  --color-brand-purple: #9d4edd;
+  --color-brand-magenta: #f72585;
+  --color-brand-dark: #050510;
+  --color-brand-surface: #0a0a1a;
+  
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-brand-dark);
+    color: #e2e8f0;
+    font-family: var(--font-mono);
+  }
+}
+
+/* Custom Cyberpunk Gradients */
+.bg-deep-space {
+  background: radial-gradient(circle at center, #0a0a1a 0%, #020205 100%);
+}
+
+.text-neon-glow {
+  text-shadow: 0 0 10px rgba(0, 255, 204, 0.7), 0 0 20px rgba(0, 255, 204, 0.5);
+}
+
+.border-neon {
+  border-color: rgba(0, 255, 204, 0.3);
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.1) inset;
+}
+
+/* Custom scrollbar for terminal feel */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050510;
+}
+::-webkit-scrollbar-thumb {
+  background: #333344;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00ffcc;
+}
