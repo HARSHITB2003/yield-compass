@@ -92,6 +92,7 @@ export default function YieldCompassApp() {
           onSelect={setSelectedPool} 
           filterWallet={filterWallet}
           walletAssets={[]} // Mocked for safety if we can't parse all chain RPCs perfectly today
+          selectedPool={selectedPool}
         />
       </div>
 
